@@ -83,3 +83,10 @@ The script includes error handling for:
 - API request failures
 - Incorrect or missing company names
 - Rate limits and request throttling
+
+##Future Improvements
+
+The future improvements for this mini-project are:
+- We can make it a user friendly website instead of a simple file system.
+- We can deploy the script in cloud environment to make it accessible for everyone.
+- We can make it more efficient by use of NLP and training Machine Learning Models.
