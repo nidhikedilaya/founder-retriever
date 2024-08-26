@@ -1,0 +1,85 @@
+# Company Founder Retrieval
+
+## Overview
+
+The **Company Founder Retrieval** script is designed to fetch information about company founders based on the company names provided in a .csv file. The script utilizes the Crunchbase API and web scraping techniques, with considerations for handling errors, managing multiple requests, and ensuring accuracy and scalability.
+
+## Features
+
+- Retrieves founder information for companies listed in a .csv file.
+- Uses Crunchbase API for data retrieval.
+- Implements web scraping for additional data.
+- Handles errors gracefully and manages multiple requests.
+- Scalable and accurate.
+
+## Prerequisites
+
+Before running the script, ensure you have the following installed:
+
+- Python 3.x
+- Required Python libraries:
+  - `requests`
+  - `beautifulsoup4`
+  - `pandas`
+
+## Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/company-founder-retrieval.git
+   cd company-founder-retrieval
+   ```
+
+2. **Install the required libraries**:
+
+   Install the dependencies:
+
+   ```bash
+   pip install pandas requests bs4 csv urllib
+   ```
+
+3. **Set up environment variables**:
+
+   Create a `.env` file in the root directory of the project and add your Crunchbase API key:
+
+   ```env
+   CRUNCHBASE_API_KEY=your_api_key_here
+   ```
+
+## Usage
+
+1. **Prepare your .csv file**:
+
+   Ensure your .csv file is in the format:
+
+   ```csv
+   CompanyName
+   Company A
+   Company B
+   ```
+
+   Save this file as `input.csv` in the root directory.
+
+2. **Run the script**:
+
+   ```bash
+   python retrieve_founders.py
+   ```
+
+   The script will process the `input.csv` file, fetch the founder information, and output the results in `output.csv`.
+
+## Script Details
+
+- **`founder_retriever.py`**: The main script file that handles the retrieval of founder information.
+- **`.env`**: Contains environment variables such as API keys.
+- **`input.csv`**: Contains names of the companies that you input.
+- **`output.csv`**: Contains the resultant CompanyName, FounderName pairs that the Python script writes into it.
+
+## Error Handling
+
+The script includes error handling for:
+
+- API request failures
+- Incorrect or missing company names
+- Rate limits and request throttling
